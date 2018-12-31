@@ -2,6 +2,10 @@ FROM python:3.6-alpine
 
 ENV APP_PATH /app
 
+# install some build deps
+RUN apk update \
+  && apk add --virtual build-deps gcc python3-dev musl-dev zlib-dev jpeg-dev
+
 # install torch (no cuda)
 RUN pip3 install https://download.pytorch.org/whl/cpu/torch-1.0.0-cp36-cp36m-linux_x86_64.whl
 RUN pip3 install torchvision
