@@ -23,10 +23,10 @@ if __name__ == "__main__":
     except:
         fatal("[-] Can't connect to the API")
 
-    prob = resp.json()
-    if type(prob) != type(dict()):
+    probs = resp.json()
+    if type(probs) != type(dict()):
         fatal("[-] Bad response from the server")
 
-    list_prob = [(k, v) for k,v in zip(prob.keys(), prob.values())]
-    sorted_prob = sorted(list_prob, key=lambda x:x[1], reverse=True)
-    print("[+] This flower is a %s" % sorted_prob[0][0])
+    list_probs = [(k, v) for k,v in zip(probs.keys(), probs.values())]
+    sorted_probs = sorted(list_probs, key=lambda x:x[1], reverse=True)
+    print("[+] This flower is a %s" % sorted_probs[0][0])
