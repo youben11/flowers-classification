@@ -11,4 +11,4 @@ class FlowerPrediction(Resource):
 api.add_resource(FlowerPrediction, '/pred')
 
 if __name__ == '__main__':
-    app.run()
+    app.run('0.0.0.0', 80)
