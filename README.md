@@ -8,7 +8,7 @@ The training was done on [this Kaggle kernel](https://www.kaggle.com/youben/flow
 ![Image of Flowers](/imgs/Flowers.png)
 
 ### How to use it?
-First, you need to make sure that there is an API available before using the CLI utility (which-flower.py). At the time of writing this, the API was hosted on 130.211.108.207
+First, you need to make sure that there is an API available before using the CLI utility (which-flower.py). At the time of writing this, the API was hosted on http://130.211.108.207:5000/pred
 
 Then you need to setup the new IP (or hopefully a domain name) of the API if it has changed by replacing the API_URL variable
 

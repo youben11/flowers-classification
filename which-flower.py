@@ -3,7 +3,8 @@
 import requests as req
 from sys import argv, exit
 
-API_URL = "http://localhost:8888/pred"
+API_URL = "http://130.211.108.207:5000/pred"
+#API_URL = "http://localhost/pred"
 
 def fatal(msg):
     print(msg)
