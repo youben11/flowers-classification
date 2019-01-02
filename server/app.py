@@ -1,10 +1,14 @@
 from flask import Flask, request
 from flask_restful import Resource, Api
+from flask_cors import CORS
 from utils import predict_flower
 import FlowerPredictionNet
 
 app = Flask(__name__)
 api = Api(app)
+
+# Allow all origin to access the API
+CORS(app)
 
 model = FlowerPredictionNet.new()
 
